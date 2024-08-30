@@ -105,7 +105,7 @@ export class GameScene extends Phaser.Scene{
                     d.x = this.box[x][y].x;
                     d.y = this.box[x][y].y;
                     d.setVisible(true);
-                   
+                    msg.rate = 0.5;
                     window.speechSynthesis.speak(msg);
                     
                 })
