@@ -12,6 +12,7 @@ export class WordList {
         this.scene = scene;
         this.load_lesson_1(0);
         this.load_lesson_2(this.word.length);
+        this.load_lesson_3(this.word.length);
    
         this.resetQuestions();
         
@@ -96,5 +97,32 @@ export class WordList {
             this.scene.load.image(this.word[q], 'assets/lesson2/' + this.word[q] + '.png');
         }
     }
+    load_lesson_3(s){
+        this.word[0+s] = 'wake_up';            this.chinese[0+s] = '醒来';
+        this.word[1+s] = 'shoemaker';          this.chinese[1+s] = '鞋匠，制鞋工人';
+        this.word[2+s] = 'sir';                this.chinese[2+s] = '先生';
+        this.word[3+s] = 'shook_ones_head';    this.chinese[3+s] = '摇头';
+        this.word[4+s] = 'bakery';             this.chinese[4+s] = '面包店';
+        this.word[5+s] = 'greet';              this.chinese[5+s] = '迎接，打招呼';
+        this.word[6+s] = 'baker';              this.chinese[6+s] = '面包师';
+        this.word[7+s] = 'right_now';          this.chinese[7+s] = '马上，立刻';
+        this.word[8+s] = 'daughter';           this.chinese[8+s] = '女儿';
+        this.word[9+s] = 'luck';               this.chinese[9+s] = '运气';
+        this.word[10+s] = 'no_one';            this.chinese[10+s] = '没有人';
+        this.word[11+s] = 'bounce';            this.chinese[11+s] = '弹开，反弹';
+        this.word[12+s] = 'dirt';              this.chinese[12+s] = '土，灰尘';
+        this.word[13+s] = 'shabby';            this.chinese[13+s] = '破烂的，破旧的，寒酸的';
+        this.word[14+s] = 'gather';            this.chinese[14+s] = '收集，聚集';
+        this.word[15+s] = 'herb';              this.chinese[15+s] = '草本植物';
+        this.word[16+s] = 'mean_to';           this.chinese[16+s] = '故意';
+        this.word[17+s] = 'shyly';             this.chinese[17+s] = '害羞地，羞怯地';
+     
+        for(let q = s; q<this.word.length;q++){
+            this.scene.load.image(this.word[q], 'assets/lesson3/' + this.word[q] + '.png');
+        }
+        
+
+    }
+
 
 }
