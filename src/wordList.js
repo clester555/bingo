@@ -144,8 +144,7 @@ export class WordList {
         for(let q = s; q<this.word.length;q++){
             this.scene.load.image(this.word[q], 'assets/lesson4/' + this.word[q] + '.png');
         }
-        
-
+    
     }
 
 
