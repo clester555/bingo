@@ -123,6 +123,30 @@ export class WordList {
         
 
     }
+    load_lesson_4(s){
+        this.word[0+s] = 'explorer';           this.chinese[0+s] = '醒探险家，探查的人来';
+        this.word[1+s] = 'treasure';           this.chinese[1+s] = '珍品，珍宝';
+        this.word[2+s] = 'trip';               this.chinese[2+s] = '旅行';
+        this.word[3+s] = 'lit_up';             this.chinese[3+s] = '发光';
+        this.word[4+s] = 'mean';               this.chinese[4+s] = '坏心的，卑鄙的';
+        this.word[5+s] = 'parent';             this.chinese[5+s] = '父母';
+        this.word[6+s] = 'several';            this.chinese[6+s] = '几个的，数个的';
+        this.word[7+s] = 'take_care_of';       this.chinese[7+s] = '照顾';
+        this.word[8+s] = 'sound';              this.chinese[8+s] = '听起来，声音';
+        this.word[9+s] = 'hard';               this.chinese[9+s] = '困难的，硬的，努力地';
+        this.word[10+s] = 'frown';             this.chinese[10+s] = '皱眉';
+        this.word[11+s] = 'sell';              this.chinese[11+s] = '卖，销售';
+        this.word[12+s] = 'gasp';              this.chinese[12+s] = '倒抽一口气';
+        this.word[13+s] = 'firmly';            this.chinese[13+s] = '坚定地，坚决地';
+        this.word[14+s] = 'fold_ones_arms';    this.chinese[14+s] = '双臂交叉';
+        this.word[15+s] = 'hung_ones_head';    this.chinese[15+s] = '垂下头';
+     
+        for(let q = s; q<this.word.length;q++){
+            this.scene.load.image(this.word[q], 'assets/lesson4/' + this.word[q] + '.png');
+        }
+        
+
+    }
 
 
 }
