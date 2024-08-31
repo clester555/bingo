@@ -10,10 +10,11 @@ export class WordList {
 
     constructor(scene){
         this.scene = scene;
-        this.load_lesson_1(0);
-        this.load_lesson_2(this.word.length);
-        this.load_lesson_3(this.word.length);
-   
+       // this.load_lesson_1(0);
+       // this.load_lesson_2(this.word.length);
+        //this.load_lesson_3(this.word.length);
+        this.load_lesson_4(this.word.length);
+        this.load_lesson_5(this.word.length);
         this.resetQuestions();
         
 
@@ -147,5 +148,31 @@ export class WordList {
     
     }
 
+
+    load_lesson_5(s){
+        this.word[0+s] = 'funny_looking';      this.chinese[0+s] = '长得很有趣的';
+        this.word[1+s] = 'walk';               this.chinese[1+s] = '使(马，狗等)慢步走';
+        this.word[2+s] = 'toward';             this.chinese[2+s] = '朝，向';
+        this.word[3+s] = 'rang_out';           this.chinese[3+s] = '大声发出';
+        this.word[4+s] = 'wave_at';            this.chinese[4+s] = '朝…挥手';
+        this.word[5+s] = 'like';               this.chinese[5+s] = '像，如同，喜欢';
+        this.word[6+s] = 'strange';            this.chinese[6+s] = '奇怪的， 陌生的';
+        this.word[7+s] = 'fine';               this.chinese[7+s] = '好的，可以接受的';
+        this.word[8+s] = 'lucky';              this.chinese[8+s] = '赚幸运的，运气好的得';
+        this.word[9+s] = 'another';            this.chinese[9+s] = '另一的';
+        this.word[10+s] = 'held_out';          this.chinese[10+s] = '伸出(手等)';
+        this.word[11+s] = 'blinked';           this.chinese[11+s] = '眨眼睛';
+        this.word[12+s] = 'lay';               this.chinese[12+s] = '帮助';
+        this.word[13+s] = 'bean';              this.chinese[13+s] = '豆子';
+        this.word[14+s] = 'special';           this.chinese[14+s] = '特别的';
+        this.word[15+s] = 'look_like';         this.chinese[15+s] = '看起来像';
+        this.word[16+s] = 'plain';             this.chinese[16+s] = '平凡的，普通的';
+        this.word[17+s] = 'deal';              this.chinese[17+s] = '交易，协议';
+        this.word[18+s] = 'make_a_deal';       this.chinese[18+s] = '做交易，协商';
+     
+        for(let q = s; q<this.word.length;q++){
+            this.scene.load.image(this.word[q], 'assets/lesson5/' + this.word[q] + '.png');
+        }
+    }
 
 }

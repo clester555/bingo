@@ -139,7 +139,7 @@ export class GameScene extends Phaser.Scene{
             }
         }
         this.addHeadings();
-        this.explosionAudio = this.sound.add('explosionAudio',{volume:0.1});
+        this.explosionAudio = this.sound.add('explosionAudio',{volume:0.3});
         this.coin_sound = this.sound.add('coin_sound',{volume:0.2});
         this.stone_sound = this.sound.add('stone_sound',{volume:1.0});
         this.applause_sound = this.sound.add('applause_sound',{volume:1.0});
