@@ -21,9 +21,13 @@ export class GameScene extends Phaser.Scene{
     stone_sound = null;
     answerIndex = null;
     answerText = null;
-
+    classNumber = 1;
     constructor(){
         super({key:'game-scene'});
+    }
+
+    init(data){
+        this.classNumber = data.classNumber;
     }
 
     preload(){
@@ -40,8 +44,25 @@ export class GameScene extends Phaser.Scene{
         
         this.load.atlas('flares', 'assets/particles/flares.png', 'assets/particles/flares.json');
         this.load.image('winning_picture','assets/winning_picture.png');
-      
+        if(this.classNumber == 1){
+            this.wordList.load_class_D(0);
+        }
+        if(this.classNumber == 2){
+            this.wordList.load_class_E(0);
+        }
+        if(this.classNumber == 3 || this.classNumber == 4){
+            this.wordList.load_lesson_1(0);
+            this.wordList.load_lesson_2(this.wordList.word.length);
+            this.wordList.load_lesson_3(this.wordList.word.length);
+            this.wordList.load_lesson_4(this.wordList.word.length);
+        }
+        if(this.classNumber == 4){
+            this.wordList.load_lesson_5(this.wordList.word.length);
+        }
+
+        this.wordList.resetQuestions();
     }
+
 
     create(){
     

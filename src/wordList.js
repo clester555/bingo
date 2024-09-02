@@ -10,20 +10,6 @@ export class WordList {
 
     constructor(scene){
         this.scene = scene;
-
-        this.load_class_E(this.word.length);
-        //this.load_class_D(this.word.length);
-        //this.load_lesson_1(this.word.length);
-        //this.load_lesson_2(this.word.length);
-        //this.load_lesson_3(this.word.length);
-        //this.load_lesson_4(this.word.length);
-        //this.load_lesson_5(this.word.length);
-        //this.resetQuestions();
-        
-        //hill stop please
-       
-
-
     }
 
     getQuestion(){
@@ -216,7 +202,7 @@ export class WordList {
         this.word[34+s] = 'tube';           this.chinese[34+s] = '管子';
         this.word[35+s] = 'tune';           this.chinese[35+s] = '曲调';
         this.word[36+s] = 'vine';           this.chinese[36+s] = '藤蔓';
-
+        console.log('dddd');
         for(let q = s; q<this.word.length;q++){
             this.scene.load.image(this.word[q], 'assets/classD/' + this.word[q] + '.png');
         }
