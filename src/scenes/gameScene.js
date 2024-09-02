@@ -65,7 +65,6 @@ export class GameScene extends Phaser.Scene{
 
 
     create(){
-    
         this.answerText = this.add.text(
             950,
             440,
