@@ -10,14 +10,17 @@ export class WordList {
 
     constructor(scene){
         this.scene = scene;
-       // this.load_lesson_1(0);
-       // this.load_lesson_2(this.word.length);
-        //this.load_lesson_3(this.word.length);
-        this.load_lesson_4(this.word.length);
-        this.load_lesson_5(this.word.length);
-        this.resetQuestions();
-        
 
+        this.load_class_E(this.word.length);
+        //this.load_class_D(this.word.length);
+        //this.load_lesson_1(this.word.length);
+        //this.load_lesson_2(this.word.length);
+        //this.load_lesson_3(this.word.length);
+        //this.load_lesson_4(this.word.length);
+        //this.load_lesson_5(this.word.length);
+        //this.resetQuestions();
+        
+        //hill stop please
        
 
 
@@ -140,7 +143,7 @@ export class WordList {
         this.word[12+s] = 'gasp';              this.chinese[12+s] = '倒抽一口气';
         this.word[13+s] = 'firmly';            this.chinese[13+s] = '坚定地，坚决地';
         this.word[14+s] = 'fold_ones_arms';    this.chinese[14+s] = '双臂交叉';
-        this.word[15+s] = 'hung_ones_head';    this.chinese[15+s] = '垂下头';
+        this.word[15+s] = 'hang_ones_head';    this.chinese[15+s] = '垂下头';
      
         for(let q = s; q<this.word.length;q++){
             this.scene.load.image(this.word[q], 'assets/lesson4/' + this.word[q] + '.png');
@@ -159,7 +162,7 @@ export class WordList {
         this.word[6+s] = 'strange';            this.chinese[6+s] = '奇怪的， 陌生的';
         this.word[7+s] = 'fine';               this.chinese[7+s] = '好的，可以接受的';
         this.word[8+s] = 'lucky';              this.chinese[8+s] = '赚幸运的，运气好的得';
-        this.word[9+s] = 'another';            this.chinese[9+s] = '另一的';
+        this.word[9+s] = 'another';            this.chinese[9+s] = '另一个';
         this.word[10+s] = 'held_out';          this.chinese[10+s] = '伸出(手等)';
         this.word[11+s] = 'blinked';           this.chinese[11+s] = '眨眼睛';
         this.word[12+s] = 'lay';               this.chinese[12+s] = '帮助';
@@ -175,4 +178,79 @@ export class WordList {
         }
     }
 
+    load_class_D(s){
+        this.word[0+s] = 'bike';            this.chinese[0+s] = '自行车';
+        this.word[1+s] = 'clap';            this.chinese[1+s] = '拍手';
+        this.word[2+s] = 'clip';            this.chinese[2+s] = '夹子';
+        this.word[3+s] = 'cone';            this.chinese[3+s] = '三角锥';
+        this.word[4+s] = 'cut';             this.chinese[4+s] = '';
+        this.word[5+s] = 'dress';           this.chinese[5+s] = '裙子';
+        this.word[6+s] = 'drum';            this.chinese[6+s] = '鼓';
+        this.word[7+s] = 'frame';           this.chinese[7+s] = '架子';
+        this.word[8+s] = 'face';            this.chinese[8+s] = '脸';
+        this.word[9+s] = 'frog';            this.chinese[9+s] = '青蛙';
+        this.word[10+s] = 'glass';          this.chinese[10+s] = '玻璃杯';
+        this.word[11+s] = 'grab';           this.chinese[11+s] = '';
+        this.word[12+s] = 'grass';          this.chinese[12+s] = '草';
+        this.word[13+s] = 'hide';           this.chinese[13+s] = '';
+        this.word[14+s] = 'hive';           this.chinese[14+s] = '蜂箱';
+        this.word[15+s] = 'hole';           this.chinese[15+s] = '洞';
+        this.word[16+s] = 'kite';           this.chinese[16+s] = '强壮的';
+        this.word[17+s] = 'lace';           this.chinese[17+s] = '蕾丝边';
+        this.word[18+s] = 'lake';           this.chinese[18+s] = '湖';
+        this.word[19+s] = 'maze';           this.chinese[19+s] = '迷宫';
+        this.word[20+s] = 'mole';           this.chinese[20+s] = '鼹鼠';
+        this.word[21+s] = 'mule';           this.chinese[21+s] = '骡子';
+        this.word[22+s] = 'nose';           this.chinese[22+s] = '鼻子';
+        this.word[23+s] = 'pine';           this.chinese[23+s] = '松树';
+        this.word[24+s] = 'hope';           this.chinese[24+s] = '跑步';
+        this.word[25+s] = 'plane';          this.chinese[25+s] = '飞机';
+        this.word[26+s] = 'plate';          this.chinese[26+s] = '盘子';
+        this.word[27+s] = 'plug';           this.chinese[27+s] = '插头';
+        this.word[28+s] = 'pose';           this.chinese[28+s] = '姿势';
+        this.word[29+s] = 'rose';           this.chinese[29+s] = '玫瑰';
+        this.word[30+s] = 'rope';           this.chinese[30+s] = '绳子';
+        this.word[31+s] = 'race';           this.chinese[31+s] = '竞赛';
+        this.word[32+s] = 'sad';            this.chinese[32+s] = '难过';
+        this.word[33+s] = 'tub';            this.chinese[33+s] = '浴缸';
+        this.word[34+s] = 'tube';           this.chinese[34+s] = '管子';
+        this.word[35+s] = 'tune';           this.chinese[35+s] = '曲调';
+        this.word[36+s] = 'vine';           this.chinese[36+s] = '藤蔓';
+
+        for(let q = s; q<this.word.length;q++){
+            this.scene.load.image(this.word[q], 'assets/classD/' + this.word[q] + '.png');
+        }
+    }
+
+
+    load_class_E(s){
+        this.word[0+s] = 'arm';                     this.chinese[0+s] = '胳膊';
+        this.word[1+s] = 'big_bigger_biggest';      this.chinese[1+s] = '大，更大，最大';
+        this.word[2+s] = 'body';                    this.chinese[2+s] = '身体';
+        this.word[3+s] = 'eyes';                    this.chinese[3+s] = '眼睛';
+        this.word[4+s] = 'fast_faster_fastest';     this.chinese[4+s] = '快，更快，最快';
+        this.word[5+s] = 'heavy';                   this.chinese[5+s] = '重的';
+        this.word[6+s] = 'hill';                    this.chinese[6+s] = '小山坡';
+        this.word[7+s] = 'hold';                    this.chinese[7+s] = '握住，拿住';
+        this.word[8+s] = 'jump';                    this.chinese[8+s] = '跳';
+        this.word[9+s] = 'mouth';                   this.chinese[9+s] = '嘴巴';
+        this.word[10+s] = 'nose';                   this.chinese[10+s] = '鼻子';
+        this.word[11+s] = 'please';                 this.chinese[11+s] = '请';
+        this.word[12+s] = 'snow';                   this.chinese[12+s] = '雪';
+        this.word[13+s] = 'snowball';               this.chinese[13+s] = '雪球';
+        this.word[14+s] = 'snowman';                this.chinese[14+s] = '雪人';
+        this.word[15+s] = 'stop';                   this.chinese[15+s] = '停止';
+        this.word[16+s] = 'strong';                 this.chinese[16+s] = '强壮的';
+        this.word[17+s] = 'talk';                   this.chinese[17+s] = '说，说话';
+        this.word[18+s] = 'tall_taller_tallest';    this.chinese[18+s] = '高，更高，最高';
+        this.word[19+s] = 'climb';                  this.chinese[19+s] = '爬';
+        this.word[20+s] = 'swim';                   this.chinese[20+s] = '游泳';
+        this.word[21+s] = 'eat';                    this.chinese[21+s] = '吃';
+        this.word[22+s] = 'under';                  this.chinese[22+s] = '在...下面';
+        this.word[23+s] = 'drink';                  this.chinese[23+s] = '喝';
+        this.word[24+s] = 'run';                    this.chinese[24+s] = '跑步';
+        for(let q = s; q<this.word.length;q++){
+            this.scene.load.image(this.word[q], 'assets/classE/' + this.word[q] + '.png');
+        }
+    }
 }

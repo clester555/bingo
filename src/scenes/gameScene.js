@@ -19,6 +19,8 @@ export class GameScene extends Phaser.Scene{
     winner = 'none';
     coin_sound = null;
     stone_sound = null;
+    answerIndex = null;
+    answerText = null;
 
     constructor(){
         super({key:'game-scene'});
@@ -28,11 +30,11 @@ export class GameScene extends Phaser.Scene{
         this.wordList = new WordList(this);
         this.load.image('stone_team','assets/stone_team.png');
         this.load.image('coin_team','assets/coin_team.png');
-        this.load.image('red_x','assets/red_x.png');
+        this.load.image('eye_image','assets/eye_image.png');
         this.load.image('selection_box','assets/selection_box.png');
         this.load.image('question_mark_box','assets/question_mark_box.png');
         this.load.audio('explosionAudio','assets/sounds/explode.mp3');
-        this.load.audio('stone_sound','assets/sounds/stone2.mp3');
+        this.load.audio('stone_sound','assets/sounds/boing.mp3');
         this.load.audio('coin_sound','assets/sounds/coin1.mp3');
         this.load.audio('applause_sound','assets/sounds/applause1.mp3');
         
@@ -43,9 +45,17 @@ export class GameScene extends Phaser.Scene{
 
     create(){
     
+        this.answerText = this.add.text(
+            950,
+            440,
+            '???',
+            {
+                color: '#FFFF00',
+                fontSize: '40px'
+            }
+            ).setOrigin(0.5);
         
-        
-        this. chinesePrompt = this.add.text(
+        this.chinesePrompt = this.add.text(
             950,
             40,
             '???',
@@ -56,14 +66,11 @@ export class GameScene extends Phaser.Scene{
             ).setOrigin(0.5);
         
         
-        let a =this.add.image(860,450,'coin_team').setInteractive();
-        let b = this.add.image(1040,450,'stone_team').setInteractive();
-        let c = this.add.image(950,600,'red_x').setInteractive().setScale(.3);
-        let d = this.add.image(1150,600,'selection_box').setInteractive();
+        let a =this.add.image(860,600,'coin_team').setInteractive();
+        let b = this.add.image(1040,600,'stone_team').setInteractive();
+        let c = this.add.image(870,440,'eye_image').setInteractive().setScale(.3);
+       
         let e = this.add.image(950,200,'question_mark_box').setOrigin(0.5).setScale(2);
-        
-
-        d.setVisible(false);
 
         a.on('pointerup', () =>
             {
@@ -75,7 +82,7 @@ export class GameScene extends Phaser.Scene{
                 this.coin_sound.play();
                 e.setTexture('question_mark_box');
                 this.selectedX = -1;
-                d.setVisible(false);
+                this.selectionBox.setVisible(false);
                 this.chinesePrompt.text = '???';
                 this.checkForWinner();
             });
@@ -90,18 +97,15 @@ export class GameScene extends Phaser.Scene{
                 this.stone_sound.play();
                 e.setTexture('question_mark_box');
                 this.selectedX = -1;
-                d.setVisible(false);
+                this.selectionBox.setVisible(false);
                 this.chinesePrompt.text = '???';
                 this.checkForWinner();
             });
        
             c.on('pointerup', () =>
             {
-                this.box[this.selectedX][this.selectedY].setTexture(e.texture);
-                e.setTexture('question_mark_box');
-                this.chinesePrompt.text = '???';
-                d.setVisible(false);
-
+                this.answerText.text = this.wordList.word[this.answerIndex];
+                c.setVisible(false);
             }); 
 
 
@@ -120,6 +124,9 @@ export class GameScene extends Phaser.Scene{
                     .setOrigin(0.5).setInteractive();
                 this.box[x][y].on('pointerup', () => 
                 {
+                    this.answerIndex = z;
+                    this.answerText.text = '???'
+                    c.setVisible(true);
                     let msg = new SpeechSynthesisUtterance();
                     msg.lang = 'zh';
                     msg.text = this.wordList.chinese[z];
@@ -128,9 +135,9 @@ export class GameScene extends Phaser.Scene{
                     this.selectedX = x;
                     this.selectedY = y;
                     e.setTexture(this.wordList.word[z])
-                    d.x = this.box[x][y].x;
-                    d.y = this.box[x][y].y;
-                    d.setVisible(true);
+                    this.selectionBox.x = this.box[x][y].x;
+                    this.selectionBox.y = this.box[x][y].y;
+                    this.selectionBox.setVisible(true);
                     msg.rate = 0.5;
                     window.speechSynthesis.speak(msg);
                     
@@ -138,10 +145,13 @@ export class GameScene extends Phaser.Scene{
 
             }
         }
+
+        this.selectionBox = this.add.image(1150,600,'selection_box').setInteractive().setVisible(false);
+
         this.addHeadings();
         this.explosionAudio = this.sound.add('explosionAudio',{volume:0.3});
         this.coin_sound = this.sound.add('coin_sound',{volume:0.2});
-        this.stone_sound = this.sound.add('stone_sound',{volume:1.0});
+        this.stone_sound = this.sound.add('stone_sound',{volume:1.5});
         this.applause_sound = this.sound.add('applause_sound',{volume:1.0});
 
         this.emitter = this.add.particles(400, 250, 'flares', {
