@@ -50,14 +50,17 @@ export class GameScene extends Phaser.Scene{
         if(this.classNumber == 2){
             this.wordList.load_class_E(0);
         }
-        if(this.classNumber == 3 || this.classNumber == 4){
+        if(this.classNumber == 3){
             this.wordList.load_lesson_1(0);
             this.wordList.load_lesson_2(this.wordList.word.length);
             this.wordList.load_lesson_3(this.wordList.word.length);
             this.wordList.load_lesson_4(this.wordList.word.length);
         }
         if(this.classNumber == 4){
-            this.wordList.load_lesson_5(this.wordList.word.length);
+            this.wordList.load_class_A(0);
+            this.wordList.load_lesson_10(this.wordList.word.length);
+            this.wordList.load_lesson_11(this.wordList.word.length);
+            this.wordList.load_lesson_12(this.wordList.word.length);
         }
 
         this.wordList.resetQuestions();
@@ -86,7 +89,7 @@ export class GameScene extends Phaser.Scene{
             ).setOrigin(0.5);
         
         
-        let a =this.add.image(860,600,'coin_team').setInteractive();
+        let a = this.add.image(860,600,'coin_team').setInteractive();
         let b = this.add.image(1040,600,'stone_team').setInteractive();
         let c = this.add.image(870,440,'eye_image').setInteractive().setScale(.3);
        

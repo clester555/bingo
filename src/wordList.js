@@ -78,10 +78,10 @@ export class WordList {
         this.word[13+s] = 'hurt';              this.chinese[13+s] = '使…受伤，使…疼痛';
         this.word[14+s] = 'try';               this.chinese[14+s] = '尝试';
         this.word[15+s] = 'twinkle';           this.chinese[15+s] = '闪耀，闪烁';
-        this.word[16+s] = 'brightly';          this.chinese[16+s] = '明亮地，闪亮地';
+        this.word[16+s] = 'brightly';          this.chinese[16+s] = '明亮，闪亮';
         this.word[17+s] = 'hope';              this.chinese[17+s] = '希望';
         this.word[18+s] = 'fill';              this.chinese[18+s] = '装满，填满';
-        this.word[19+s] = 'magical';           this.chinese[19+s] = '魔术的，魔法的)';
+        this.word[19+s] = 'magical';           this.chinese[19+s] = '魔术的，魔法的';
         this.word[20+s] = 'happen';            this.chinese[20+s] = '(事件，事情等)发生';
         for(let q = s; q<this.word.length;q++){
             this.scene.load.image(this.word[q], 'assets/lesson2/' + this.word[q] + '.png');
@@ -163,6 +163,135 @@ export class WordList {
             this.scene.load.image(this.word[q], 'assets/lesson5/' + this.word[q] + '.png');
         }
     }
+
+
+    load_lesson_10(s){
+        this.word[0+s] = 'baked';               this.chinese[0+s] = '烤的，烘焙的';
+        this.word[1+s] = 'bread';               this.chinese[1+s] = '面包';
+        this.word[2+s] = 'cross_ones_heart';    this.chinese[2+s] = '在胸口划十字，发誓';
+        this.word[3+s] = 'die_from';            this.chinese[3+s] = '死于';
+        this.word[4+s] = 'favorite';            this.chinese[4+s] = '最喜欢的';
+        this.word[5+s] = 'get_out_of';          this.chinese[5+s] = '离开';
+        this.word[6+s] = 'growl';               this.chinese[6+s] = '咕咕叫，低沉而大声地说话';
+        this.word[7+s] = 'hunger';              this.chinese[7+s] = '饥饿';
+        this.word[8+s] = 'hunting';             this.chinese[8+s] = '狩猎，打猎';
+        this.word[9+s] = 'knee';                this.chinese[9+s] = '膝盖';
+        this.word[10+s] = 'let_out';            this.chinese[10+s] = '发出';
+        this.word[11+s] = 'loud';               this.chinese[11+s] = '大声的';
+        this.word[12+s] = 'promise';            this.chinese[12+s] = '许诺，保证';
+        this.word[13+s] = 'right_now';          this.chinese[13+s] = '名字叫...，被称为...';
+        this.word[14+s] = 'should';             this.chinese[14+s] = '应该';
+        this.word[15+s] = 'sigh';               this.chinese[15+s] = '叹气，叹息';
+        this.word[16+s] = 'steal';              this.chinese[16+s] = '偷窃';
+        this.word[17+s] = 'treasure';           this.chinese[17+s] = '珍品，珍宝';
+        this.word[18+s] = 'weak';               this.chinese[18+s] = '虚弱的，无力的';
+        this.word[19+s] = 'went_on';            this.chinese[19+s] = '继续下去)';
+        this.word[20+s] = 'wife';               this.chinese[20+s] = '妻子，夫人';
+        this.word[21+s] = 'worse';              this.chinese[21+s] = '更坏的';
+        this.word[22+s] = 'at_once';            this.chinese[22+s] = '马上';
+     
+        for(let q = s; q<this.word.length;q++){
+            this.scene.load.image(this.word[q], 'assets/lesson10/' + this.word[q] + '.png');
+        }
+    }
+
+    load_lesson_11(s){
+        this.word[0+s] = 'footstep';            this.chinese[0+s] = '走路的声音';
+        this.word[1+s] = 'get_to_ones_feet';    this.chinese[1+s] = '站起来';
+        this.word[2+s] = 'gulp_down';           this.chinese[2+s] = '一口吞下';
+        this.word[3+s] = 'nasty';               this.chinese[3+s] = '恶意的';
+        this.word[4+s] = 'oven';                this.chinese[4+s] = '烤箱';
+        this.word[5+s] = 'porridge';            this.chinese[5+s] = '粥，麦片粥';
+        this.word[6+s] = 'sharp';               this.chinese[6+s] = '锋利的，尖的';
+        this.word[7+s] = 'sniff';               this.chinese[7+s] = '吸气的声音';
+        this.word[8+s] = 'thump';               this.chinese[8+s] = '重击声，砰然声';
+        this.word[9+s] = 'toss';                this.chinese[9+s] = '扔，抛，投';
+        this.word[10+s] = 'crack';              this.chinese[10+s] = '裂缝';
+        for(let q = s; q<this.word.length;q++){
+            this.scene.load.image(this.word[q], 'assets/lesson11/' + this.word[q] + '.png');
+        }
+    }
+
+    load_lesson_12(s){
+        this.word[0+s] = 'alive';           this.chinese[0+s] = '活着的，现存的';
+        this.word[1+s] = 'aweful';          this.chinese[1+s] = '可怕的，糟糕的';
+        this.word[2+s] = 'blueberry';       this.chinese[2+s] = '蓝莓';
+        this.word[3+s] = 'corner';          this.chinese[3+s] = '边角，棱角';
+        this.word[4+s] = 'dead';            this.chinese[4+s] = '死亡的';
+        this.word[5+s] = 'dear';            this.chinese[5+s] = '亲爱的';
+        this.word[6+s] = 'fear';            this.chinese[6+s] = '害怕，恐惧';
+        this.word[7+s] = 'melt_away';       this.chinese[7+s] = '慢慢溶化';
+        this.word[8+s] = 'pancake';         this.chinese[8+s] = '薄煎饼，薄烤饼';
+        this.word[9+s] = 'pat';             this.chinese[9+s] = '轻拍，抚拍';
+        this.word[10+s] = 'slice';          this.chinese[10+s] = '薄片，切片';
+        this.word[11+s] = 'stomp';          this.chinese[11+s] = '重踩，重踏';
+        this.word[12+s] = 'sweetly';        this.chinese[12+s] = '温柔，亲切';
+        this.word[13+s] = 'wash_up';        this.chinese[13+s] = '洗(手或脸)'
+        this.word[14+s] = 'yell';           this.chinese[14+s] = '叫喊、吼叫';
+        this.word[15+s] = 'dream';          this.chinese[15+s] = '做梦';
+     
+        for(let q = s; q<this.word.length;q++){
+            this.scene.load.image(this.word[q], 'assets/lesson12/' + this.word[q] + '.png');
+        }
+    }
+
+    load_class_A(s){
+        this.word[0+s] = 'terrible';          this.chinese[0+s] = '可怕的，糟糕的)';
+        this.word[1+s] = 'rainstorm';         this.chinese[1+s] = '暴风雨';
+        this.word[2+s] = 'wash_away';         this.chinese[2+s] = '冲走';
+        this.word[3+s] = 'cheerfully';        this.chinese[3+s] = '高兴地，欢快地';
+        this.word[4+s] = 'evil';               this.chinese[4+s] = '邪恶的，坏的';
+        this.word[5+s] = 'clever';             this.chinese[5+s] = '聪明的，机灵的';
+        for(let q = s; q<this.word.length;q++){
+            this.scene.load.image(this.word[q], 'assets/lesson1/' + this.word[q] + '.png');
+        }
+
+        this.word[6+s] = 'grand';              this.chinese[6+s] = '宏伟的';
+        this.word[7+s] = 'make_money';         this.chinese[7+s] = '赚钱';
+        this.word[8+s] = 'magical';           this.chinese[8+s] = '魔术的，魔法的)';
+        this.word[9+s] = 'twinkle';           this.chinese[9+s] = '闪耀，闪烁';
+        this.word[10+s] = 'nobody';            this.chinese[10+s] = '没有人';
+
+        for(let q = s + 6; q<this.word.length;q++){
+            this.scene.load.image(this.word[q], 'assets/lesson2/' + this.word[q] + '.png');
+        }
+
+        this.word[11+s] = 'baker';              this.chinese[11+s] = '面包师';
+        this.word[12+s] = 'shoemaker';          this.chinese[12+s] = '鞋匠，制鞋工人';
+        this.word[13+s] = 'shabby';            this.chinese[13+s] = '破烂的，破旧的，寒酸的';
+        this.word[14+s] = 'mean_to';           this.chinese[14+s] = '故意';
+        this.word[15+s] = 'luck';               this.chinese[15+s] = '运气';
+
+        for(let q = s + 11; q<this.word.length;q++){
+            this.scene.load.image(this.word[q], 'assets/lesson3/' + this.word[q] + '.png');
+        }
+
+        this.word[16+s] = 'several';            this.chinese[16+s] = '几个的，数个的';
+        this.word[17+s] = 'take_care_of';       this.chinese[17+s] = '照顾';
+        this.word[18+s] = 'sound';              this.chinese[18+s] = '听起来，声音';
+        this.word[19+s] = 'gasp';              this.chinese[19+s] = '倒抽一口气';
+        this.word[20+s] = 'firmly';            this.chinese[20+s] = '坚定地，坚决地';
+        this.word[21+s] = 'fold_ones_arms';    this.chinese[21+s] = '双臂交叉';
+        this.word[22+s] = 'hang_ones_head';    this.chinese[22+s] = '垂下头';
+        this.word[23+s] = 'explorer';           this.chinese[23+s] = '醒探险家，探查的人来';
+        this.word[24+s] = 'treasure';           this.chinese[24+s] = '珍品，珍宝';
+
+        for(let q = s + 16; q<this.word.length;q++){
+            this.scene.load.image(this.word[q], 'assets/lesson4/' + this.word[q] + '.png');
+        }
+
+        this.word[25+s] = 'funny_looking';      this.chinese[25+s] = '长得很有趣的';
+        this.word[26+s] = 'bean';              this.chinese[26+s] = '豆子';
+        this.word[27+s] = 'special';           this.chinese[27+s] = '特别的';
+        this.word[28+s] = 'look_like';         this.chinese[28+s] = '看起来像';
+        this.word[29+s] = 'plain';             this.chinese[29+s] = '平凡的，普通的';
+        this.word[30+s] = 'deal';              this.chinese[30+s] = '交易，协议';
+
+        for(let q = s + 25; q<this.word.length;q++){
+            this.scene.load.image(this.word[q], 'assets/lesson5/' + this.word[q] + '.png');
+        }
+    }
+
 
     load_class_D(s){
         this.word[0+s] = 'bike';            this.chinese[0+s] = '自行车';
