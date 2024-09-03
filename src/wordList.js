@@ -57,8 +57,6 @@ export class WordList {
         for(let q = s; q<this.word.length;q++){
             this.scene.load.image(this.word[q], 'assets/lesson1/' + this.word[q] + '.png');
         }
-        
-
     }
 
     load_lesson_2(s){
@@ -87,6 +85,7 @@ export class WordList {
             this.scene.load.image(this.word[q], 'assets/lesson2/' + this.word[q] + '.png');
         }
     }
+
     load_lesson_3(s){
         this.word[0+s] = 'wake_up';            this.chinese[0+s] = '醒来';
         this.word[1+s] = 'shoemaker';          this.chinese[1+s] = '鞋匠，制鞋工人';
@@ -310,7 +309,7 @@ export class WordList {
         this.word[13+s] = 'hide';           this.chinese[13+s] = '躲藏';
         this.word[14+s] = 'hive';           this.chinese[14+s] = '蜂箱';
         this.word[15+s] = 'hole';           this.chinese[15+s] = '洞';
-        this.word[16+s] = 'kite';           this.chinese[16+s] = '强壮的';
+        this.word[16+s] = 'kite';           this.chinese[16+s] = '风筝';
         this.word[17+s] = 'lace';           this.chinese[17+s] = '蕾丝边';
         this.word[18+s] = 'lake';           this.chinese[18+s] = '湖';
         this.word[19+s] = 'maze';           this.chinese[19+s] = '迷宫';
